@@ -9,9 +9,9 @@ interface Props {
 }
 
 function GameCard({ game }: Props) {
-  console.log(getCropedImageUrl(game.background_image));
+  // console.log(getCropedImageUrl(game.background_image));
   return (
-    <Card borderRadius={10} overflow={"hidden"}>
+    <Card width={"300px"} borderRadius={10} overflow={"hidden"}>
       <Image src={getCropedImageUrl(game.background_image)} />
       <CardBody>
         <Heading fontSize={"1xl"}>{game.name}</Heading>
