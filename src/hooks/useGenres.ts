@@ -1,4 +1,4 @@
-import useData from "./useData";
+import genres from "../data/genres";
 
 export interface Genres {
   id: number;
@@ -6,5 +6,6 @@ export interface Genres {
   image_background: string;
 }
 
-const useGenres = () => useData<Genres>("/genres");
+const useGenres = () => ({ data: genres, error: null, isLoading: false });
+// const useGenres = () => useData<Genres>("/genres");
 export default useGenres;
