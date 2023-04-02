@@ -28,11 +28,16 @@ function PlatformIconList({ platforms }: Props) {
     web: BsGlobe,
     android: FaAndroid,
   };
+  // console.log(platforms);
   return (
     <HStack marginY={2}>
       {platforms.map((platform) => (
         // <Text>{platform.name}</Text>
-        <Icon as={iconMap[platform.slug]} color={"gray.500"} />
+        <Icon
+          key={platform.id}
+          as={iconMap[platform.slug]}
+          color={"gray.500"}
+        />
       ))}
     </HStack>
   );
